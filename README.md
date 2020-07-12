@@ -7,7 +7,7 @@ tb_order_item.sql
 用于生成mybatis generate代码
 
 主要分片逻辑：
-$$
+```
 spring:
   main:
     allow-bean-definition-overriding: true
@@ -22,7 +22,7 @@ spring:
       ds0:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://47.104.130.105:3306/myshop_0?useUnicode=true&characterEncoding=utf-8&serverTimezone=Hongkong&useSSL=false
+        jdbc-url: jdbc:mysql://47.CC4.130.105:3306/myshop_0?useUnicode=true&characterEncoding=utf-8&serverTimezone=Hongkong&useSSL=false
         username: root
         password: 'root'
         hikari:
@@ -37,7 +37,7 @@ spring:
       ds1:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://121.199.65.124:3306/myshop_1?useUnicode=true&characterEncoding=utf-8&serverTimezone=Hongkong&useSSL=false
+        jdbc-url: jdbc:mysql://121.CC9.65.124:3306/myshop_1?useUnicode=true&characterEncoding=utf-8&serverTimezone=Hongkong&useSSL=false
         username: root
         password: 'root'
         hikari:
@@ -79,4 +79,4 @@ spring:
             inline:
               algorithm-expression: tb_order_item_$->{order_id % 2}
               sharding-column: order_id
-$$
+```
