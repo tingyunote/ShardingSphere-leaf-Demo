@@ -5,6 +5,7 @@ tb_order.sql
 tb_order_item.sql 
 
 用于生成mybatis generate代码
+通过dubbo-rpc的方式去leaf服务拿
 
 主要分片逻辑：
 ```
