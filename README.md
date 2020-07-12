@@ -7,7 +7,7 @@ tb_order_item.sql
 用于生成mybatis generate代码
 
 主要分片逻辑：
-$$
+```
 spring:
   main:
     allow-bean-definition-overriding: true
@@ -79,4 +79,4 @@ spring:
             inline:
               algorithm-expression: tb_order_item_$->{order_id % 2}
               sharding-column: order_id
-$$
+```
